@@ -1,0 +1,21 @@
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+.bg-lightgray
+{
+    background-color:#fff;
+    border-top: 2px solid #265CBF;
+    
+}
+footer{ 
+    position:absolute; 
+    bottom:0; 
+    width:100%; 
+    z-index: 2;
+  }
+.copyrights label{
+    font-weight: 900;
+    color: #888888;
+}
+.copyrights span{
+    font-size: 11px;
+    color: #888888;
+}
