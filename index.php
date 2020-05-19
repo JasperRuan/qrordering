@@ -22,7 +22,7 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div class="col-md-3">
                   <div class = "left-ad">
-                    <img src="./img/left-ad.png" alt="">
+                    <img src="media/img/left-ad.png" alt="">
                   </div>
                 </div>
                 <div id="login-column" class="col-md-4">

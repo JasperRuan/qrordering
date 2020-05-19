@@ -9,7 +9,7 @@
 <footer class="container-fluid text-center bg-lightgray">
 
         <div class="copyrights" style="margin-top:25px;">
-           <label><i>powered by</i></label> <img src="img/logo_long.jpg" alt=""  width="150px" height= "30px"/>
+           <label><i>powered by</i></label> <img src="media/img/logo_long.jpg" alt=""  width="150px" height= "30px"/>
                 <br>
                 <span>11 Apollo drive,Rosedale<br/>(+64)224112551</span>
             <p style="color:#888888;font-size:11px;font-weight:700"> &copy 2020 WEBZILLA,All right reserved</p>
