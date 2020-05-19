@@ -1,4 +1,4 @@
-<?php include 'share/header_main.php' ; ?>
+<?php include 'share/header.php' ; ?>
 <!doctype html>
 <html lang="en">
   <head>

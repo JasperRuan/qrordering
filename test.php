@@ -1,11 +1,13 @@
+<?php
+include 'share/header.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href = "header.css">
-    <link rel= "stylesheet" href = "footer.css">
+    <link rel="stylesheet" href="share/index.css">
+    <link rel="stylesheet" href="share/header.css">
+    <link rel="stylesheet" href="share/footer.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
