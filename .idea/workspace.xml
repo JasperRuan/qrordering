@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a764a147-0913-4eda-a470-1bd574f58f78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/login_validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/login_validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/register_validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/register_validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1c3Iu9r4kj9uEN8QbRd4gfCeDNV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a764a147-0913-4eda-a470-1bd574f58f78" name="Default Changelist" comment="" />
+      <created>1589751070765</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589751070765</updated>
+      <workItem from="1589751076745" duration="8147000" />
+      <workItem from="1589841566062" duration="35813000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1114" y="623" key="NewPhpFileDialog" timestamp="1589866768365">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1114" y="623" key="NewPhpFileDialog/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1589866768365" />
+    <state x="1114" y="623" key="NewPhpFileDialog/-1920.744.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1589767269503" />
+    <state x="781" y="342" key="SettingsEditor" timestamp="1589861569719">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="342" key="SettingsEditor/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1589861569719" />
+    <state x="1273" y="0" width="1294" height="1407" key="dock-window-1" timestamp="1589925009750">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1273" y="0" width="1294" height="1407" key="dock-window-1/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1589925009750" />
+    <state x="1333" y="0" width="1234" height="1407" key="dock-window-2" timestamp="1589931494234">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1333" y="0" width="1234" height="1407" key="dock-window-2/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1589931494234" />
+    <state x="1403" y="0" width="1164" height="1407" key="dock-window-3" timestamp="1589933400024">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1403" y="0" width="1164" height="1407" key="dock-window-3/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1589933400024" />
+    <state x="1613" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1589934910779">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1613" y="320" width="672" height="678" key="search.everywhere.popup/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1589934910779" />
+  </component>
+</project>

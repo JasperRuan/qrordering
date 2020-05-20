@@ -1,0 +1,49 @@
+
+body,html{
+  height: 100%;
+}
+.sidebar{
+  background-color: #fff;
+  height: 100%;
+ 
+}
+.sidenav {
+            
+  height: 100%;
+  width: 20%;
+  width:auto;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align:center;
+  background-color: #265CBF;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top:62px;
+  z-index: 1;
+  }
+
+  .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  display: block;
+  }
+
+  .sidenav a:hover {
+  color: #f1f1f1;
+  }
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #D9D9DC !important;
+    
+    min-height: 100%;
+    position: relative;
+    
+    
+  }
+  html{ height:100%; }
+  
