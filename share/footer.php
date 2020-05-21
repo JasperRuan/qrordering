@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -24,6 +25,7 @@
                 <span>11 Apollo drive,Rosedale<br/>(+64)224112551</span>
             <p style="color:#888888;font-size:11px;font-weight:700"> &copy 2020 WEBZILLA,All right reserved</p>
         </div>
+
 </footer>
 </body>
 </html>
