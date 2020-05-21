@@ -1,4 +1,6 @@
+
 <?php include 'share/header.php' ; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +13,7 @@
   <link rel= "stylesheet" href = "share/footer.css">
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         .input_error {
@@ -22,6 +25,7 @@
 
 
     </style>
+
 </head>
 <body>
 
@@ -37,6 +41,7 @@
                     <img src="media/img/left-ad.png" alt="">
                   </div>
                 </div>
+
                 <div id="login-column flip-container" class="col-md-4">
                     
                     <div id="login-box" class="col-md-12 flipper">
@@ -54,10 +59,12 @@
                             <div class="form-group">
                                 <!--<label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>-->
                                 <input type="submit" name="login_submit" id="login_submit" class="btn btn-info btn-md" value="Login"> <br/>
+
                                 <div class="reg-link" onclick="show()">
                                   <a href="#" >Register here</a>
                                 </div>
                             </div>
+
 
                         </form>
                         <form id="login-form" class="form" action="backend/register_validation.php" method="post" style="display: none;">
@@ -90,7 +97,6 @@
                                 <a href="#" >Login</a>
                               </div>
                           </div>
-
                       </form>
                     </div>
 
@@ -99,6 +105,7 @@
             </div>
         </div>
     </div>
+
 
     <script>
         var currentForm = 0;
@@ -109,10 +116,12 @@
         document.getElementsByTagName("form")[1].style.display="block";
         currentForm = 1;
 
+
        }
       }
       function show2(){
        if( document.getElementsByTagName("form")[1].style.display!="none"){
+
         document.getElementsByTagName("form")[1].style.display="none";
         document.getElementsByTagName("form")[0].style.display="block";
            currentForm = 0;
@@ -157,3 +166,4 @@
 </html>
 
 <?php include 'share/footer.php' ; ?>
+
