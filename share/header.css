@@ -1,0 +1,10 @@
+.navbar{
+    background-color: white !important;
+    border-bottom: 2px solid #265CBF !important;
+}
+.nav-item {
+   
+}
+.navbar-nav .nav-link {
+    font-weight: 700;
+}
