@@ -37,10 +37,9 @@
                     <img src="media/img/left-ad.png" alt="">
                   </div>
                 </div>
-                <div id="login-column" class="col-md-4">
+                <div id="login-column flip-container" class="col-md-4">
                     
-                    <div id="login-box" class="col-md-12">
-                      <!--login page-->
+                    <div id="login-box" class="col-md-12 flipper">
                         <form id="login-form" class="form" action="backend/login_validation.php" method="post">
                             <h3 class="text-left text-info" style="margin-bottom: 20px;">Login</h3>
                             <div class="form-group">
@@ -61,7 +60,6 @@
                             </div>
 
                         </form>
-                        <!--register pages-->
                         <form id="login-form" class="form" action="backend/register_validation.php" method="post" style="display: none;">
                           <h3 class="text-left text-info" style="margin-bottom: 20px;">Register</h3>
                           <div class="form-group">
