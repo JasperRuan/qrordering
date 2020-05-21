@@ -11,8 +11,9 @@
     <link rel="stylesheet" href = "share/header_main.css">
     <link rel= "stylesheet" href = "share/footer.css">
     <link rel="stylesheet" href="share/customer.css">
-    
+    <link rel="stylesheet" href="share/test.css">
     <style>
+    
        
     </style>
     
@@ -20,40 +21,12 @@
   </head>
   
   <body>
-      <div>
-        <div class="sidenav">
-            <div class="sidemenue_item"  onclick="showSub()">
-                商家管理
-            </div>
-            
-            <div class="sidemenue_item">
-                产品管理
-            </div>
-            <div class="sidemenue_item">
-                订单显示
-            </div>
-            
-            
-        </div>
-
-        <div class="sidenav-sub">
-            <div id="1" style="display:none">
-                <div class="sub_item">
-                    <a href="table.php">
-                        桌号管理
-                    </a>
-                </div>
-                
-                <div class="sub_item">
-                    <a href="profile.php">
-                        商家信息
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-
+  <div >
+    <div class="row">
+        <div class="col-md-3 no-float">Navigation</div>
+        <div class="col-md-9 no-float">Content</div>
     </div>
+</div>
                 
 
         
