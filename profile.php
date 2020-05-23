@@ -14,70 +14,70 @@ else {
 }
 ?>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href = "share/header_main.css">
-    
-    <link rel="stylesheet" href="share/customer.css">
-    
-    <style>
-     
-       .row{
-           width:100% !important;
-           position:relative !important;
-           display:inline-block !important;
-       }
-       .bottom{
-           margin-bottom:30px;
-           
-       }
-       .button-group{
-           margin-top:20px
-       }
-       input[type="file"] {
-           display: none!important;
-       }
-       .custom-file-upload {
-           border: 1px solid #ccc;
-           display: inline-block;
-           padding: 6px 12px;
-           cursor: pointer;
-           position: relative;
-           bottom: 5px;
-           background: gray;
-       }
-        #logo {
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href = "share/header_main.css">
 
-        }
-       
-    </style>
-    
-    <title>Hello, Cusotmer name</title>
-  </head>
-  
-  <body>
-      <div class="info">
+        <link rel="stylesheet" href="share/customer.css">
+
+        <style>
+
+            .row{
+                width:100% !important;
+                position:relative !important;
+                display:inline-block !important;
+            }
+            .bottom{
+                margin-bottom:30px;
+
+            }
+            .button-group{
+                margin-top:20px
+            }
+            input[type="file"] {
+                display: none!important;
+            }
+            .custom-file-upload {
+                border: 1px solid #ccc;
+                display: inline-block;
+                padding: 6px 12px;
+                cursor: pointer;
+                position: relative;
+                bottom: 5px;
+                background: gray;
+            }
+            #logo {
+
+            }
+
+        </style>
+
+        <title>Hello, Cusotmer name</title>
+    </head>
+
+    <body>
+    <div class="info">
 
         <div class="sidenav">
             <div class="sidemenue_item"  onclick="showSub()">
                 商家管理
             </div>
-            
+
             <div class="sidemenue_item">
                 产品管理
             </div>
             <div class="sidemenue_item">
                 订单显示
             </div>
-            
-            
+
+
         </div>
         <div class="sidenav-sub" >
             <div id="1" style="display:none">
@@ -86,105 +86,105 @@ else {
                         桌号管理
                     </a>
                 </div>
-                
+
                 <div class="sub_item">
                     <a href="profile.php">
                         商家信息
                     </a>
                 </div>
-                
+
             </div>
         </div>
-          <div class="profile_message" id="profile_message" style="width: 40%;margin-left: 30%;background: green;color: white;text-align: center;padding: 6px 0;font-size: 20px;visibility: hidden">
+        <div class="profile_message" id="profile_message" style="width: 40%;margin-left: 30%;background: green;color: white;text-align: center;padding: 6px 0;font-size: 20px;visibility: hidden">
             hello
-          </div>
-        <form action="backend/update_shop_info.php" method="post" enctype="multipart/form-data">
-        <div class="main_container">
-            
-            <div class="bus_info">
-
-                <div class="title">
-                    Store Profile
-                  
-                </div>
-
-                <div class="row">
-                    <div class="fonts col-md-3">
-                        LOGO
-                    </div>
-                    <div class="edit_info " style="border: none">
-                        <img  src="media/img/logo_reg.jpg" alt="" id="shop_logo" style="border: 1px solid black">
-                        <label for="logo" class="custom-file-upload" style="width: inherit">
-                            Upload
-                        </label>
-                        <input type="file" class="btn btn-primary" value="Edit" id="logo" name="logo">
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="fonts col-md-3">
-                            English Name
-                    </div>
-                    <div class="user_input">
-                    <img src="media/img/edit.png" alt="" width="20px" height="20px">
-                        <input type="text" value = "<?php echo $english_name; ?>" name="english_name" id="english_name" class="form-control">
-                    </div>
-                </div>
-                <hr>
-                <div class="row bottom">
-                    <div class="fonts col-md-3">
-                            Chinese Name
-                    </div>
-                    <div class="user_input">
-                        <img src="media/img/edit.png" alt="" width="20px" height="20px">
-                        <input type="text" value ="<?php echo $chinese_name; ?>" name="chinese_name" id="chinese_name" class="form-control">
-                    </div>
-                </div>
-                
-           
-            </div>
-            
-            <div class="fix_info">
-                <div class="title" style="margin-bottom:10px">
-                    Contact
-                  
-                </div>
-                <div class="row">
-                    <div class="fonts col-md-3" >
-                            Contact Number
-                    </div>
-                    <div class="user_input" style="margin-top:10px" >
-
-                        <?php echo $phone; ?>
-                    </div>
-
-                    
-                </div>
-                <hr>
-                <div class="row bottom">
-                    <div class="fonts col-md-3" >
-                        Email
-                    </div>
-                    <div class="user_input" style="margin-top:10px" >
-                        <?php echo $email; ?>
-                        <!-- 记得这里要提取用户SQL 手机号 -->
-                    </div>
-
-                </div>
-                
-            </div>
-            <div class="button-group">
-                <input type="submit" id="submit" class="btn btn-primary" value="Save Profile"></input>
-            </div>
-            
         </div>
+        <form action="backend/update_shop_info.php" method="post" enctype="multipart/form-data">
+            <div class="main_container">
+
+                <div class="bus_info">
+
+                    <div class="title">
+                        Store Profile
+
+                    </div>
+
+                    <div class="row">
+                        <div class="fonts col-md-3">
+                            LOGO
+                        </div>
+                        <div class="edit_info " style="border: none">
+                            <img  src="media/img/logo_reg.jpg" alt="" id="shop_logo" style="border: 1px solid black">
+                            <label for="logo" class="custom-file-upload" style="width: inherit">
+                                Upload
+                            </label>
+                            <input type="file" class="btn btn-primary" value="Edit" id="logo" name="logo">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="fonts col-md-3">
+                            English Name
+                        </div>
+                        <div class="user_input">
+                            <img src="media/img/edit.png" alt="" width="20px" height="20px">
+                            <input type="text" value = "<?php echo $english_name; ?>" name="english_name" id="english_name" class="form-control">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row bottom">
+                        <div class="fonts col-md-3">
+                            Chinese Name
+                        </div>
+                        <div class="user_input">
+                            <img src="media/img/edit.png" alt="" width="20px" height="20px">
+                            <input type="text" value ="<?php echo $chinese_name; ?>" name="chinese_name" id="chinese_name" class="form-control">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="fix_info">
+                    <div class="title" style="margin-bottom:10px">
+                        Contact
+
+                    </div>
+                    <div class="row">
+                        <div class="fonts col-md-3" >
+                            Contact Number
+                        </div>
+                        <div class="user_input" style="margin-top:10px" >
+
+                            <?php echo $phone; ?>
+                        </div>
+
+
+                    </div>
+                    <hr>
+                    <div class="row bottom">
+                        <div class="fonts col-md-3" >
+                            Email
+                        </div>
+                        <div class="user_input" style="margin-top:10px" >
+                            <?php echo $email; ?>
+                            <!-- 记得这里要提取用户SQL 手机号 -->
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="button-group">
+                    <input type="submit" id="submit" class="btn btn-primary" value="Save Profile"></input>
+                </div>
+
+            </div>
         </form>
     </div>
-                
 
-        
 
-    
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -204,64 +204,64 @@ else {
         }
     </script>
 
-  <script>
-      var file_change = false;
-      function readURL(input) {
-          if (input.files && input.files[0]) {
-              var reader = new FileReader();
+    <script>
+        var file_change = false;
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-              reader.onload = function(e) {
-                  $('#shop_logo').attr('src', e.target.result);
-                  file_change = true;
-              }
+                reader.onload = function(e) {
+                    $('#shop_logo').attr('src', e.target.result);
+                    file_change = true;
+                }
 
-              reader.readAsDataURL(input.files[0]); // convert to base64 string
-          }
-      }
+                reader.readAsDataURL(input.files[0]); // convert to base64 string
+            }
+        }
 
-      $("#logo").change(function() {
-          readURL(this);
-      });
-
-
-      $(document).ready(function(){
-          $("form").submit(function(event) {
-              event.preventDefault();
-              var english_name = $("#english_name").val();
-              var chinese_name = $("#chinese_name").val();
-              var submit = $("#submit").val();
-              console.log(submit);
-              $("#profile_message").load("backend/update_shop_info.php",{
-                  english_name: english_name,
-                  chinese_name: chinese_name,
-                  submit: submit
-              });
-
-              if (file_change){
-                  var fd = new FormData();
-                  var files = $('#logo')[0].files[0];
-                  fd.append('file',files);
-
-                  $.ajax({
-                      url: 'backend/upload_logo.php',
-                      type: 'post',
-                      data: fd,
-                      contentType: false,
-                      processData: false,
-                      success: function(response){
-                          if(response != 0){
+        $("#logo").change(function() {
+            readURL(this);
+        });
 
 
-                          }else{
+        $(document).ready(function(){
+            $("form").submit(function(event) {
+                event.preventDefault();
+                var english_name = $("#english_name").val();
+                var chinese_name = $("#chinese_name").val();
+                var submit = $("#submit").val();
+                console.log(submit);
+                $("#profile_message").load("backend/update_shop_info.php",{
+                    english_name: english_name,
+                    chinese_name: chinese_name,
+                    submit: submit
+                });
 
-                          }
-                      },
-                  });
-              }
-          })
-      })
-  </script>
-  </body>
+                if (file_change){
+                    var fd = new FormData();
+                    var files = $('#logo')[0].files[0];
+                    fd.append('file',files);
 
-</html>
+                    $.ajax({
+                        url: 'backend/upload_logo.php',
+                        type: 'post',
+                        data: fd,
+                        contentType: false,
+                        processData: false,
+                        success: function(response){
+                            if(response != 0){
+
+
+                            }else{
+
+                            }
+                        },
+                    });
+                }
+            })
+        })
+    </script>
+    </body>
+
+    </html>
 <?php include 'share/footer.php' ; ?>
