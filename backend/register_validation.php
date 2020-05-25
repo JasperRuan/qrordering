@@ -1,11 +1,11 @@
 <?php
-
+include "connect_database.php";
 if (isset($_POST['register_submit'])){
-    $email = $_POST['register_email'];
-    $name= $_POST['register_name'];
-    $phone = $_POST['register_phone'];
-    $password = $_POST['register_password'];
-    $re_password = $_POST['register_re_password'];
+    $email = $conn->real_escape_string($_POST['register_email']);
+    $name= $conn->real_escape_string($_POST['register_name']);
+    $phone = $conn->real_escape_string($_POST['register_phone']);
+    $password = $conn->real_escape_string($_POST['register_password']);
+    $re_password = $conn->real_escape_string($_POST['register_re_password']) ;
 
     $emailError = false;
     $nameError = false;
@@ -19,12 +19,30 @@ if (isset($_POST['register_submit'])){
     }
     else {
         $re_passwordError = false;
-        if ($email == 'yes'){
+        $sql = "SELECT Email 
+                FROM Shops 
+                WHERE Email = '$email'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
             $emailError = true; #email已被注册
             echo '<span>Email has been registered</span>';
         }
         else {
-            $emailError = false;
+            $v_code = $code = md5(uniqid($email, true));
+            $sql = "INSERT INTO Shops(English_name, Email, Password, Phone, V_code)
+                    VALUE ('$name', '$email', '$password', '$phone', '$v_code');
+            ";
+            $result = $conn->query($sql);
+            echo 'An Email has been sent with an verification link';
+            #发送邮件
+            $to = $_POST['register_email'];
+            $subject = "QR Order Activate Account";
+            $txt = "Click the following link to activate your account\n\n
+                https://qrordernz.com/backend/email_validation.php?code=".$v_code;
+            $headers = "From: info@qrordernz.com" . "\r\n" .
+                "CC: somebodyelse@example.com";
+            mail($to,$subject,$txt,$headers);
+
         }
     }
 

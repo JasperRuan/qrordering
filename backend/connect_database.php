@@ -1,5 +1,5 @@
 <?php
-$servername = "gator3248.hostgator.com:3306";
+$servername = "gator3248.hostgator.com";
 $username = "jasperru_root";
 $password = "1209Angela!";
 $dbname = "jasperru_qrordernz";
@@ -9,5 +9,5 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo 'hello';
+$conn->query("set names utf8");
 ?>

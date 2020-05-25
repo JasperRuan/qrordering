@@ -42,7 +42,7 @@
                   </div>
                 </div>
 
-                <div id="login-column flip-container" class="col-md-4">
+                <div id="login-column" class="col-md-4">
                     
                     <div id="login-box" class="col-md-12 flipper">
                         <form id="login-form" class="form" action="backend/login_validation.php" method="post">
