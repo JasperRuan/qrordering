@@ -124,9 +124,24 @@ body,html{
         color: #265CBF;
         
     }
+    .tableid{
+      margin:10 0 0 10;
+      font-weight: 800;
+      font-size: 40px;
+      color: #265CBF;
+      
+    }
+    .scan_to_order{
+      margin:10 0 0 10;
+      font-weight: 800;
+      font-size: 20px;
+      color: #265CBF;
+    }
     .inputarea{
+
         width: 100%;
         margin-left: 35px;
+        margin-bottom: 2px;
     }
     .word{
         margin-left: 35px;
@@ -183,7 +198,77 @@ body,html{
   .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #888;
-    width: 80%;
+    width: 20%;
   }
+.notify{
+  background-color: #FFBFBF;
+}
+.qrarea{
+  background-color: #E2E5F4;
+}
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .qr_subimg{
+    text-align: center;
+  }
+  .qr_subimg img{
+    width:80%
+  }
+
+  .plus{
+    text-align: center;
+    width: 100%;
+    
+  }
+  .plus img{
+   padding-top: 40%;
+    width: 30%;
+    padding-bottom: 40%;
+    
+  }
+  .plus_item{
+        box-sizing: border-box;
+        width: 23%;
+        height:auto;
+      
+     
+        margin-right: 10px;
+        margin-bottom: 10px;
+        float: left;
+        
+  }
+  .headingarea{
+    display: flex;
+    margin-bottom: 3px;
+    width: 100%;
+  }
+  .headingarea input{
+    background-color: #265CBF;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    margin-left: 30%;
+  }
+  .headingarea input:hover{
+    background-color: #7FFF00;
+  }
+
+  @media screen and (max-width: 767px) {
+    .qr_item{width:50%}
+
+    
+}

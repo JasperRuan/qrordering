@@ -26,7 +26,7 @@
                 商家管理
             </div>
             
-            <div class="sidemenue_item">
+            <div class="sidemenue_item"  onclick="showSub2()">
                 产品管理
             </div>
             <div class="sidemenue_item">
@@ -37,7 +37,7 @@
         </div>
 
         <div class="sidenav-sub">
-            <div id="1" style="display:none">
+            <div id="menu1" style="display:none">
                 <div class="sub_item">
                     <a href="table.php">
                         桌号管理
@@ -47,6 +47,20 @@
                 <div class="sub_item">
                     <a href="profile.php">
                         商家信息
+                    </a>
+                </div>
+                
+            </div>
+            <div id="menu2" style="display:none">
+                <div class="sub_item">
+                    <a href="dishcata.php">
+                        菜品分类
+                    </a>
+                </div>
+                
+                <div class="sub_item">
+                    <a href="dishmanage.php">
+                       菜品管理
                     </a>
                 </div>
                 
@@ -68,12 +82,33 @@
         function showSub(){
             document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#ffffff"
             document.getElementsByClassName("sidemenue_item")[0].style.color = "#265CBF"
-            if(document.getElementById("1").style.display == "none"){
-                document.getElementById("1").style.display="block"
+            document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffffff"
+            if(document.getElementById("menu1").style.display == "none"){
+                document.getElementById("menu1").style.display="block"
+                document.getElementById("menu2").style.display="none"
             }else{
-                document.getElementById("1").style.display="none"
+                document.getElementById("menu1").style.display="none"
+                document.getElementById("menu2").style.display="none"
                 document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
                 document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffff"
+            }
+        }
+
+
+        function showSub2(){
+            document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#ffffff"
+            document.getElementsByClassName("sidemenue_item")[1].style.color = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffffff"
+            if(document.getElementById("menu2").style.display == "none"){
+                document.getElementById("menu2").style.display="block"
+                document.getElementById("menu1").style.display="none"
+            }else{
+                document.getElementById("menu1").style.display="none"
+                document.getElementById("menu2").style.display="none"
+                document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
+                document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffff"
             }
         }
     </script>
