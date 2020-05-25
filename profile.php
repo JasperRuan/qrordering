@@ -1,16 +1,51 @@
 <?php include 'share/header_main.php';
-if(isset($_COOKIE['shop_id'])){
-    $shop_id = $_COOKIE['shop_id'];
-    $chinese_name = '网撕拉';
-    $english_name = 'Webzilla';
-    $phone = '0223915167';
-    $email = 'jasperruannz@gmail.com';
+if(isset($_COOKIE['qrorder_shop_id'])){
+    $shop_id = $_COOKIE['qrorder_shop_id'];
+
+    if(isset($_COOKIE['qrorder_chinese_name'])){
+        $chinese_name = $_COOKIE['qrorder_chinese_name'];
+    }
+    else {
+        $chinese_name = '';
+    }
+
+    if(isset($_COOKIE['qrorder_english_name'])){
+        $english_name = $_COOKIE['qrorder_english_name'];
+    }
+    else {
+        $english_name = '';
+    }
+
+    if(isset($_COOKIE['qrorder_phone'])){
+        $phone = $_COOKIE['qrorder_phone'];
+    }
+    else {
+        $phone = '';
+    }
+
+    if(isset($_COOKIE['qrorder_email'])){
+        $email = $_COOKIE['qrorder_email'];
+    }
+    else {
+        $email = '';
+    }
+    #get logo path from database
+    include 'backend/connect_database.php';
+    $sql = "SELECT Logo_path
+            FROM Logos
+            WHERE Shop_id = '$shop_id' 
+            ";
+    $result = $conn->query($sql);
+    $logo_path = 'media/img/logo_reg.jpg';
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $logo_path = $row['Logo_path'];
+        }
+
+    }
 }
 else {
-    $chinese_name = '网撕拉';
-    $english_name = 'Webzilla';
-    $phone = '0223915167';
-    $email = 'jasperruannz@gmail.com';
+    header('location: https://www.qrordernz.com');
 }
 ?>
 
@@ -24,9 +59,7 @@ else {
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href = "share/header_main.css">
-
         <link rel="stylesheet" href="share/customer.css">
-
         <style>
 
             .row{
@@ -113,7 +146,7 @@ else {
                             LOGO
                         </div>
                         <div class="edit_info " style="border: none">
-                            <img  src="media/img/logo_reg.jpg" alt="" id="shop_logo" style="border: 1px solid black">
+                            <img  src="<?php echo $logo_path; ?>" alt="" id="shop_logo" style="border: 1px solid black">
                             <label for="logo" class="custom-file-upload" style="width: inherit">
                                 Upload
                             </label>
