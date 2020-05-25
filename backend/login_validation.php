@@ -25,22 +25,23 @@ if (isset($_POST['submit'])){
             #登陆成功
             $cookie_name = 'qrorder_shop_id';
             $cookie_value = $shop_id;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
+
             $cookie_name = 'qrorder_chinese_name';
             $cookie_value = $chinese_name;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
 
             $cookie_name = 'qrorder_english_name';
             $cookie_value = $english_name;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
 
             $cookie_name = 'qrorder_phone';
             $cookie_value = $phone;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
 
             $cookie_name = 'qrorder_email';
             $cookie_value = $email;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
         }
         else {
             $passwordError = true;
@@ -74,8 +75,5 @@ if (isset($_POST['submit'])){
         message_element.innerText = 'Successfully logged in';
         window.location.href = "index.php";
     }
-
-
-
 
 </script>
