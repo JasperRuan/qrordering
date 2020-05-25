@@ -495,13 +495,7 @@
                     <img src="media/img/qrcode.jpg" alt="">
                 </div>
             </div>
-
-      
-            
-            
-
             <div class="justmargin " style="height:110px">
-               
             </div>
             
         </div>
