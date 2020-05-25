@@ -1,0 +1,254 @@
+
+body,html{
+    height: 100%;
+  }
+  .sidebar{
+    background-color: #fff;
+    height: 100%;
+   
+  }
+  .sidenav {
+    
+    height: 100%;
+    width: 20%;
+    width:auto;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    text-align:center;
+    background-color: #265CBF;
+    overflow-x: hidden;
+    padding-top: 20px;
+    margin-top:62px;
+    z-index: 1;
+    }
+    .sidenav-sub {
+      margin-left:105px ;    
+      height: 100%;
+      width: 20%;
+      width:auto;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      text-align:center;
+      background-color: #ffffff;
+      overflow-x: hidden;
+      padding-top: 20px;
+      margin-top:62px;
+      z-index: 1;
+      border-right: 1px solid #265CBF;
+      }
+    .sub_item{
+      color: #265CBF;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 6px 8px 6px 16px;
+      
+    }
+    .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    }
+  
+    .sidenav a:hover {
+    color: #f1f1f1;
+    }
+   
+  body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff !important;
+      
+      height: 100%;
+      position: relative;
+      
+      
+    }
+    html{ height:100%; }
+    footer{ 
+      position:fixed!important; 
+      bottom:0; 
+      width:100%; 
+      z-index: 2;
+    }
+    .sidemenue_item{
+      font-size: 20px;
+      cursor: pointer;
+      color: #fff;
+      padding: 6px 15px 6px 16px;
+    }
+    .container{
+      margin-left: 15%!important;
+    }
+    .main{
+      overflow:auto; 
+      margin-top: 20px;
+      margin-bottom: 100px;
+      margin-left: 15%;
+      height:auto;
+      width: 80%;
+      min-height: 70%;
+     
+      
+    }
+    
+    
+   
+   
+    @media screen and (max-width: 767px) {
+      .sidenav{display: none;}
+      .sidenav-sub{display: none;}
+  
+      
+  }
+
+.margin_for_table{
+  margin-top: 50%;
+}
+
+.pt-3-half {
+  padding-top: 1.4rem;
+  position: relative
+  }
+.content1{
+  width: 100%;
+  position: absolute;
+
+  
+}
+.content{
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  text-align: center;
+  
+}
+.btn-danger{
+  background-color: #265CBF !important;
+  border-color: #265CBF !important;
+}
+
+.content button{
+  width: 80%;
+}
+.dropdown{
+  width: 50%;
+  text-align: center;
+}
+
+
+
+
+.checkbox {
+ 
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.checkbox  span {
+  color: #34495E !important;
+  padding: 0.5rem 0.25rem !important;
+}
+.checkbox  input {
+    height: 15px !important;
+    width: 15px !important;
+    background-color: #265CBF !important;
+    cursor: pointer !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #265CBF!important;
+  width: 20%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title{
+  text-align: center;
+  color: #265CBF;
+  font-size: 20px;
+  font-weight: 900;
+}
+.catag{
+  display: flex;
+  margin-bottom: 10px;
+  
+}
+.neiron{
+  text-align: center;
+}
+.head{
+  color: #265CBF;
+  font-size: 15px;
+  font-weight: 800;
+  margin-right: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

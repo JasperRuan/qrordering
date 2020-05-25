@@ -35,11 +35,11 @@
   <body>
      
         <div class="sidenav">
-            <div class="sidemenue_item"  onclick="showSub()">
+            <div class="sidemenue_item" onclick="showSub()">
                 商家管理
             </div>
             
-            <div class="sidemenue_item">
+            <div class="sidemenue_item" onclick="showSub2()">
                 产品管理
             </div>
             <div class="sidemenue_item">
@@ -50,7 +50,7 @@
         </div>
 
         <div class="sidenav-sub">
-            <div id="1" style="display:none">
+            <div id="menu1" style="display:none">
                 <div class="sub_item">
                     <a href="table.php">
                         桌号管理
@@ -64,23 +64,44 @@
                 </div>
                 
             </div>
+            <div id="menu2" style="display:none">
+                <div class="sub_item">
+                    <a href="dishcata.php">
+                        菜品分类
+                    </a>
+                </div>
+                
+                <div class="sub_item">
+                    <a href="dishmanage.php">
+                       菜品管理
+                    </a>
+                </div>
+                
+            </div>
         </div>
+
+        
         
         <div class="main">
 
-            <div class="qr_item" onclick= "showqr()">
+            <div class="qr_item" >
                 <div class="title">
                     Table 1 <!--get table num from sql table id-->
                 </div>
                 <div class="desc">
-                    <div class="word">
-                        备注
+                    <div class="headingarea" >
+                        <div class="word">
+                            备注
+                        </div>
+                        <input type="button" value="save">
                     </div>
                     <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
+                        <input type="text" name="备注"  class="form-control" value="vip1">
+                        
                     </div>
+                    
                 </div>
-                <div class="qr_img">
+                <div class="qr_img" id="0" onclick= "showqr(this.id)">
                     <img src="media/img/qrcode.jpg" alt="">
                 </div>
 
@@ -89,412 +110,43 @@
 
                     <!-- Modal content -->
                     <div class="modal-content">
-                        <span class="close" onclick="close()">&times;</span>
-                        <p>Some text in the Modal..</p>
+
+                            <div class="qr_subimg">
+                                <div class="notify">
+                                    请使用截图工具（Window + shift + S 调出截图）截取下方蓝色区域并打印放到对应桌子上
+                                </div>
+                                <div class="qrarea">
+                                    <div class="tableid">
+                                        VIP1
+                                    </div>
+                                    <img src="media/img/power_wezilla.JPG" alt="">
+                                    <img src="media/img/qrcode.jpg" alt=""><!--qr code for table-->
+
+                                    <div class="scan_to_order">
+                                        请扫二维码点餐<br>
+                                        Please scan QR code to order food
+                                    </div>
+                                    
+
+                                    
+                                </div>
+                            </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
+            <!--这里添加二维码button -->
+            <div class="plus_item"  >
+                <div class="plus">
+                    <img src="media/img/plus.jpg" alt="">
                 </div>
             </div>
 
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
+            
 
 
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
-
-
-            <div class="qr_item">
-                <div class="title">
-                    Table 1 <!--get table num from sql table id-->
-                </div>
-                <div class="desc">
-                    <div class="word">
-                        备注
-                    </div>
-                    <div class="inputarea">
-                        <input type="text" name="备注"  class="form-control">
-                    </div>
-                </div>
-                <div class="qr_img">
-                    <img src="media/img/qrcode.jpg" alt="">
-                </div>
-            </div>
+           
 
       
             
@@ -519,32 +171,61 @@
         function showSub(){
             document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#ffffff"
             document.getElementsByClassName("sidemenue_item")[0].style.color = "#265CBF"
-            if(document.getElementById("1").style.display == "none"){
-                document.getElementById("1").style.display="block"
+            document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffffff"
+            if(document.getElementById("menu1").style.display == "none"){
+                document.getElementById("menu1").style.display="block"
+                document.getElementById("menu2").style.display="none"
             }else{
-                document.getElementById("1").style.display="none"
+                document.getElementById("menu1").style.display="none"
+                document.getElementById("menu2").style.display="none"
                 document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
                 document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffff"
             }
         }
 
+
         $(".sidenav").height(Math.max($(".main").height(),$(".sidenav").height()+50));
         $(".sidenav-sub").height(Math.max($(".main").height(),$(".sidenav-sub").height()+50));
 
 
-        function showqr(){
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
+        function showSub2(){
+            document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#ffffff"
+            document.getElementsByClassName("sidemenue_item")[1].style.color = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffffff"
+            if(document.getElementById("menu2").style.display == "none"){
+                document.getElementById("menu2").style.display="block"
+                document.getElementById("menu1").style.display="none"
+            }else{
+                document.getElementById("menu1").style.display="none"
+                document.getElementById("menu2").style.display="none"
+                document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
+                document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffff"
+            }
         }
-        function close(){
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
+
+        //get the high of the sidebar
+        $(".sidenav").height(Math.max($(".main").height(),$(".sidenav").height()));
+        $(".sidenav-sub").height(Math.max($(".main").height(),$(".sidenav-sub").height()));
+
+        
+        var num = 0;
+        var modal = document.getElementsByClassName("modal");
+        function showqr(id){
+            num = id
+            modal[num].style.display = "block";
+        }
+        function close(id){
+            
+            num=id
+            modal[num].style.display = "none";
         }
 
         window.onclick = function(event) {
-            var modal = document.getElementById("myModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
+            
+            if (event.target == modal[num]) {
+                modal[num].style.display = "none";
             }
         }
     </script>
