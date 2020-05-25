@@ -528,8 +528,8 @@
             }
         }
 
-        $(".sidenav").height(Math.max($(".main").height(),$(".sidenav").height()*2));
-        $(".sidenav-sub").height(Math.max($(".main").height(),$(".sidenav-sub").height()*2));
+        $(".sidenav").height(Math.max($(".main").height(),$(".sidenav").height()+50));
+        $(".sidenav-sub").height(Math.max($(".main").height(),$(".sidenav-sub").height()+50));
 
 
         function showqr(){

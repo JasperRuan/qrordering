@@ -1,27 +1,55 @@
 <?php
-
+include "connect_database.php";
 if (isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
     $emailError = false;
     $passwordError = false;
-    if ($email == 'yes'){
-        $emailError = false;
+    $sql = "SELECT Shop_id, Chinese_name, English_name, Email, Password, Phone, Address, Verified 
+            FROM Shops 
+            WHERE Verified = 1 and Email = '$email'";
+    $result = $conn->query($sql);
 
-        if ($password == 'yes'){
+    if ($result->num_rows > 0) {
+        $emailError = false;
+        while($row = $result->fetch_assoc()) {
+            $shop_id = $row['Shop_id'];
+            $chinese_name = $row['Chinese_name'];
+            $english_name = $row['English_name'];
+            $psw = $row['Password'];
+            $phone = $row['Phone'];
+            $address = $row['Address'];
+        }
+        if ($psw == $password){
             $passwordError = false;
-        }else {
+            #登陆成功
+            $cookie_name = 'qrorder_shop_id';
+            $cookie_value = $shop_id;
+            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+            $cookie_name = 'qrorder_chinese_name';
+            $cookie_value = $chinese_name;
+            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+
+            $cookie_name = 'qrorder_english_name';
+            $cookie_value = $english_name;
+            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+
+            $cookie_name = 'qrorder_phone';
+            $cookie_value = $phone;
+            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+
+            $cookie_name = 'qrorder_email';
+            $cookie_value = $email;
+            setcookie($cookie_name, $cookie_value, time() + (60 * 2), "/"); // 86400 = 1 day
+        }
+        else {
             $passwordError = true;
             echo '<span>Password Wrong</span>';
         }
-
-    }
-    else {
+    } else {
         $emailError = true;
         echo '<span>Email wrong</span>';
     }
-
-
 } else {
     echo '<span>Something went wrong here</span>';
 }
