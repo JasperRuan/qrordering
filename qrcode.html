@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+
+<body>
+<div class="register_succ">
+    <div class="qrcode" id="qr_code_container" style=""></div>
+</div>
+
+</body>
+<script src="script/qrcode.min.js"></script>
+<script>
+    let qrcode = new QRCode(document.getElementById('qr_code_container'));
+    qrcode.makeCode("https://webzilla.co.nz/covid/record.php?shop_id=");
+</script>
+</body>
+</html>

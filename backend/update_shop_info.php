@@ -1,10 +1,11 @@
 <?php
 $error = false;
+include "connect_database.php";
 if(isset($_POST['submit']) && isset($_COOKIE['qrorder_shop_id'])){
-    $english_name = $_POST['english_name'];
-    $chinese_name = $_POST['chinese_name'];
-    $shop_id = $_COOKIE['qrorder_shop_id'];
-    include "connect_database.php";
+    $english_name = $conn->real_escape_string($_POST['english_name']);
+    $chinese_name = $conn->real_escape_string($_POST['chinese_name']);
+    $shop_id = $conn->real_escape_string($_COOKIE['qrorder_shop_id']);
+
     $sql = "UPDATE Shops
             SET Chinese_name = '$chinese_name', English_name = '$english_name'
             WHERE Shop_id = '$shop_id';

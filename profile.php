@@ -103,9 +103,7 @@ else {
                 商家管理
             </div>
 
-            
-            <div class="sidemenue_item"  onclick="showSub2()">
-
+            <div class="sidemenue_item">
                 产品管理
             </div>
             <div class="sidemenue_item">
@@ -113,9 +111,9 @@ else {
             </div>
 
 
-        <div class="sidenav-sub">
-            <div id="menu1" style="display:none">
-
+        </div>
+        <div class="sidenav-sub" >
+            <div id="1" style="display:none">
                 <div class="sub_item">
                     <a href="table.php">
                         桌号管理
@@ -129,22 +127,7 @@ else {
                 </div>
 
             </div>
-            <div id="menu2" style="display:none">
-                <div class="sub_item">
-                    <a href="dishcata.php">
-                        菜品分类
-                    </a>
-                </div>
-                
-                <div class="sub_item">
-                    <a href="dishmanage.php">
-                       菜品管理
-                    </a>
-                </div>
-                
-            </div>
         </div>
-
         <div class="profile_message" id="profile_message" style="width: 40%;margin-left: 30%;background: green;color: white;text-align: center;padding: 6px 0;font-size: 20px;visibility: hidden">
             hello
         </div>
@@ -155,7 +138,6 @@ else {
 
                     <div class="title">
                         Store Profile
-
 
                     </div>
 
@@ -181,7 +163,6 @@ else {
                             <input type="text" value = "<?php echo $english_name; ?>" name="english_name" id="english_name" class="form-control">
                         </div>
                     </div>
-
                     <hr>
                     <div class="row bottom">
                         <div class="fonts col-md-3">
@@ -191,17 +172,14 @@ else {
                             <img src="media/img/edit.png" alt="" width="20px" height="20px">
                             <input type="text" value ="<?php echo $chinese_name; ?>" name="chinese_name" id="chinese_name" class="form-control">
                         </div>
-
                     </div>
 
 
                 </div>
 
-
                 <div class="fix_info">
                     <div class="title" style="margin-bottom:10px">
                         Contact
-
 
                     </div>
                     <div class="row">
@@ -246,41 +224,17 @@ else {
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
-
-       function showSub(){
-            document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#ffffff"
-            document.getElementsByClassName("sidemenue_item")[0].style.color = "#265CBF"
-            document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
-            document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffffff"
-            if(document.getElementById("menu1").style.display == "none"){
-                document.getElementById("menu1").style.display="block"
-                document.getElementById("menu2").style.display="none"
+        function showSub(){
+            document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#ffffff";
+            document.getElementsByClassName("sidemenue_item")[0].style.color = "#265CBF";
+            if(document.getElementById("1").style.display == "none"){
+                document.getElementById("1").style.display="block";
             }else{
-                document.getElementById("menu1").style.display="none"
-                document.getElementById("menu2").style.display="none"
-                document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
-                document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffff"
+                document.getElementById("1").style.display="none";
+                document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF";
+                document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffff";
             }
         }
-
-
-        function showSub2(){
-            document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#ffffff"
-            document.getElementsByClassName("sidemenue_item")[1].style.color = "#265CBF"
-            document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
-            document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffffff"
-            if(document.getElementById("menu2").style.display == "none"){
-                document.getElementById("menu2").style.display="block"
-                document.getElementById("menu1").style.display="none"
-            }else{
-                document.getElementById("menu1").style.display="none"
-                document.getElementById("menu2").style.display="none"
-                document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
-                document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffff"
-            }
-        }
-
-       
     </script>
 
     <script>
@@ -339,7 +293,6 @@ else {
                 }
             })
         })
-
     </script>
     </body>
 

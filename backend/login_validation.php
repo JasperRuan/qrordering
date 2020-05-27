@@ -1,8 +1,8 @@
 <?php
 include "connect_database.php";
 if (isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = $conn->real_escape_string($_POST['email']);
+    $password = $conn->real_escape_string($_POST['password']);
     $emailError = false;
     $passwordError = false;
     $sql = "SELECT Shop_id, Chinese_name, English_name, Email, Password, Phone, Address, Verified 
