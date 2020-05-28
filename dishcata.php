@@ -1,4 +1,11 @@
-<?php include 'share/header_main.php' ; ?>
+<?php include 'share/header_main.php' ;
+if (isset($_COOKIE['qrorder_shop_id'])) {
+    $shop_id = $_COOKIE['qrorder_shop_id'];
+}
+else {
+    header('location: https://www.qrordernz.com');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +13,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href = "share/header_main.css">
     
@@ -81,60 +87,48 @@
                         class="fa fa-plus fa-2x" aria-hidden="true"></i></a></span>
                 <table class="table table-bordered table-responsive-md table-striped text-center">
                     <thead>
-                    <tr>
-                        <th class="text-center">ID</th>
+                    <tr id="first_row">
+
                         <th class="text-center">产品分类管理</th>
                         <th class="text-center">Remove</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <form action="">
-                            <td class="pt-3-half">
-                                1
-                            </td>
+                    <?php
+                    include 'backend/connect_database.php';
+                    $current_index = 1;
+                    $sql = "SELECT Food_category_id, Chinese_name, English_name
+                            FROM Food_categories
+                            WHERE Shop_id = '$shop_id'
+                            ORDER BY 1
+                            ";
+                    $result = $conn->query($sql);
+                    $last_food_category_id = 0;
+                    if ($result->num_rows > 0) {
+
+                        while($row = $result->fetch_assoc()) {
+                            $last_food_category_id = $row['Food_category_id'];
+                            echo '<tr id="row'. $row['Food_category_id'] .'">
+                        <div>
+
                             <td class="pt-3-half" >
                                 <div class="content1" >
-                                    <p>鸡肉(chicken<!--english name from sql-->)</p>
+                                    <p>'. $row['Chinese_name'] .'('. $row['English_name'] .')</p>
                                 </div>
                             </td>
-                            
                             <td>
-                                
-                                    <span class="table-remove"><button type="button"
+                                    <span class="table-remove" id="'. $row['Food_category_id'] .'"><button type="button"
                                         class="btn btn-danger btn-rounded btn-sm my-0"  style="margin-bottom:5px !important">删除产品</button></span>
                                     </br>
-                                    
-                                
                             </td>
-                        </form>
-                    </tr>
-                    <!-- This is our clonable table line -->
-                   
-                    <!-- This is our clonable table line -->
-                    
-                    <!-- This is our clonable table line -->
-                    <tr>
-                        <form action="">
-                            <td class="pt-3-half">
-                                1
-                            </td>
-                            <td class="pt-3-half" >
-                                <div class="content1">
-                                <p>鸡肉(chicken<!--english name from sql-->)</p>
-                                </div>
-                            </td>
-                            
-                            <td>
-                                
-                                    <span class="table-remove"><button type="button"
-                                        class="btn btn-danger btn-rounded btn-sm my-0"  style="margin-bottom:5px !important">删除产品</button></span>
-                                    </br>
-                                    
-                                
-                            </td>
-                        </form>
-                    </tr>
+                        </div>
+                    </tr>';
+                            $current_index = $current_index + 1;
+                        }
+                    }
+
+                    ?>
+
                     </tbody>
                 </table>
                 </div>
@@ -156,7 +150,7 @@
                                     <div class="head">
                                         中文名字
                                     </div>
-                                    <input type="text" require>
+                                    <input type="text" required  id="chinese_name">
 
                                     
                                 </div>
@@ -164,12 +158,12 @@
                                     <div class="head">
                                         英文名字
                                     </div>
-                                    <input type="text">
+                                    <input type="text" required id="english_name">
 
                                     
                                 </div>
                                 <div class="save-btn">
-                                    <input type="button" class="btn btn-primary" value="添加">
+                                    <input type="button" class="btn btn-primary add_btn" value="添加" id="add_btn">
                                 </div>
                             </form>
                         </div>
@@ -188,6 +182,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
+        var last_food_category_id = <?php echo $last_food_category_id; ?>;
+        var current_food_category_id = 0;
         function showSub(){
             document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#ffffff"
             document.getElementsByClassName("sidemenue_item")[0].style.color = "#265CBF"
@@ -262,28 +258,87 @@
         span.onclick = function() {
                 modal.style.display = "none";
             }
-        $('.table-add').on('click', 'i', () => {
-           
 
-            // When the user clicks on <span> (x), close the modal
-            
+        document.getElementById('add_btn').onclick = function() {
+            var chinese_name = document.getElementById('chinese_name').value;
+            var english_name = document.getElementById('english_name').value;
+            var shop_id = <?php echo $shop_id; ?>;
+            $.ajax
+            ({
+                url: 'backend/update_food_category.php',
+                data: {
+                    "shop_id": shop_id,
+                    "chinese_name": chinese_name,
+                    "english_name": english_name,
+                    'add_submit': 1
+                },
+                type: 'post',
+                success: function(result)
+                {
+                    var chinese_name = document.getElementById('chinese_name').value;
+                    document.getElementById('chinese_name').value = '';
+                    var english_name = document.getElementById('english_name').value;
+                    document.getElementById('english_name').value = '';
+                    current_food_category_id = result;
 
-            const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
+                    document.getElementById("myModal").style.display = "none";
+                    var insert_code = '<tr id="row' + current_food_category_id +'">\n' +
+                        '   <form action="">\n' +
+                        '      <td class="pt-3-half" >\n' +
+                        '         <div class="content1" >\n' +
+                        '            <p>\n' +
+                        '               '+ chinese_name + '('+ english_name +')\n' +
+                        '            </p>\n' +
+                        '         </div>\n' +
+                        '      </td>\n' +
+                        '      <td>\n' +
+                        '         <span class="table-remove" id="'+ current_food_category_id + '"><button type="button"\n' +
+                        '            class="btn btn-danger btn-rounded btn-sm my-0"  style="margin-bottom:5px !important">删除产品</button></span>\n' +
+                        '         </br>\n' +
+                        '      </td>\n' +
+                        '   </form>\n' +
+                        '</tr>';
+                    if (last_food_category_id == 0){
+                        $( insert_code ).insertAfter( "#first_row" );
+                    }
+                    else {
+                        if (document.getElementById("row"+ last_food_category_id)){
+                            $( insert_code ).insertAfter( "#row"+ last_food_category_id );
+                        }
+                        else {
+                            location.reload();
+                        }
+                    } // 改内容!!!!!!!!!!!!!!!!!!!!!
 
-            if ($tableID.find('tbody tr').length === 0) {
-
-                $('tbody').append(newTr);
-            }
-
-                $tableID.find('table').append($clone);
-        });
+                    last_food_category_id = current_food_category_id;
+                    console.log('add cate');
+                }
+            });
+        };
 
         $tableID.on('click', '.table-remove', function () {
-
-            $(this).parents('tr').detach();
+            var shop_id = <?php echo $shop_id; ?>;
+            var item = $(this);
+            item.parents('tr').detach();
+            var food_category_id = item[0].id;
+            console.log('test: ', item[0]);
+            console.log('food cate id: '+food_category_id);
+            //delete the category from database
+            $.ajax
+            ({
+                url: 'backend/update_food_category.php',
+                data: {
+                    "shop_id": shop_id,
+                    "food_category_id": food_category_id,
+                    'delete_submit': 1
+                },
+                type: 'post',
+                success: function(result)
+                {
+                    console.log('delete_succ')
+                }
+            });
         });
-
-       
 
       
     </script>

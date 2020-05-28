@@ -159,7 +159,7 @@ else {
                             English Name
                         </div>
                         <div class="user_input">
-                            <img src="media/img/edit.png" alt="" width="20px" height="20px">
+                            <img src="media/img/edit.jpg" alt="" width="20px" height="20px">
                             <input type="text" value = "<?php echo $english_name; ?>" name="english_name" id="english_name" class="form-control">
                         </div>
                     </div>
@@ -169,7 +169,7 @@ else {
                             Chinese Name
                         </div>
                         <div class="user_input">
-                            <img src="media/img/edit.png" alt="" width="20px" height="20px">
+                            <img src="media/img/edit.jpg" alt="" width="20px" height="20px">
                             <input type="text" value ="<?php echo $chinese_name; ?>" name="chinese_name" id="chinese_name" class="form-control">
                         </div>
                     </div>
