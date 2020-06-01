@@ -94,17 +94,76 @@ body,html{
       width: 80%;
       min-height: 70%;
      
+      display: flex;
       
     }
     
-    
-   .uploadimg{
-     width:30%
-   }
-   .uploadimg img{
-     width:100%
-   }
-   
+    .onprocess{
+      width: 49%;
+      margin-right: 20px;
+     
+      border-radius: 30px;
+    }
+    .processed{
+      width: 49%;
+      
+      border-radius: 30px;
+    }
+    .process_item{
+      margin-top: 30px;
+    }
+    .item{
+      border: 2px solid #265CBF;
+      margin: 2px;
+      border-radius: 30px;
+      display: flex;
+    }
+    .heading{
+      text-align: center;
+      color: #265CBF;
+      font-size: 25px;
+      font-weight: 900;
+    }
+    .tabledetail{
+      width: 40% !important;
+      margin-left: 10px;
+      
+    }
+
+    .tabledetail h2{
+      color: #265CBF;
+      font-size: 25px;
+      font-weight: 900;
+      margin-top: 10px!important;
+      margin-bottom: 20px;
+    }
+    .status{
+      width: 40%;
+    }
+    .status_new{
+      width: 100%;
+      text-align: center;
+      color: white;
+      background-color: #006400;
+      border-radius: 30px;
+      margin-top: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .status_add{
+      width: 100%;
+      text-align: center;
+      color: white;
+      background-color: #C93756;
+      border-radius: 30px;
+      margin-top: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .goto{
+      width: 20%;
+    }
+
     @media screen and (max-width: 767px) {
       .sidenav{display: none;}
       .sidenav-sub{display: none;}
@@ -112,80 +171,18 @@ body,html{
       
   }
 
-.margin_for_table{
-  margin-top: 50%;
-}
-
-.pt-3-half {
-  padding-top: 1.4rem;
-  position: relative
-  }
-.content1{
-  width: 100%;
-  position: absolute;
-
-  
-}
-.content{
-  width: 100%;
-  position: absolute;
-  top: 35%;
-  text-align: center;
-  
-}
-.btn-danger{
-  background-color: #265CBF !important;
-  border-color: #265CBF !important;
-}
-
-.content button{
-  width: 80%;
-}
-.dropdown{
-  
-  text-align: center;
+.just_margin{
+  margin-bottom: 100px;
 }
 
 
 
-
-.checkbox {
- 
-  cursor: pointer !important;
-  position: relative !important;
-}
-
-.checkbox  span {
-  color: #34495E !important;
-  padding: 0.5rem 0.25rem !important;
-}
-.checkbox  input {
-    height: 15px !important;
-    width: 15px !important;
-    background-color: #265CBF !important;
-    cursor: pointer !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
-  
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
@@ -199,19 +196,28 @@ body,html{
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 2px solid #265CBF!important;
-  width: 30%;
+  border: 1px solid #888;
+  width: 40%;
+  
 }
 
 /* The Close Button */
 .close {
-  color: #8B0000 !important;
+  color: #aaaaaa;
   float: right;
   font-size: 40px !important;
   font-weight: bold;
-  opacity: 1 !important;
+  width: 40%;
 }
-
+.orderDetail{
+  display: flex;
+  
+}
+.orderDetail h3{
+  color: #265CBF;
+  font-weight: 900;
+  width: 60%;
+}
 .close:hover,
 .close:focus {
   color: #000;
@@ -219,28 +225,43 @@ body,html{
   cursor: pointer;
 }
 
-.title{
-  text-align: center;
-  color: #265CBF;
+.orders{
+  width: 100%;
+}
+
+.total_price{
   font-size: 20px;
   font-weight: 900;
-}
-.catag{
-  display: flex;
-  margin-bottom: 10px;
-  
-}
-.neiron{
-  text-align: center;
-  
-}
-.head{
   color: #265CBF;
-  font-size: 15px;
-  font-weight: 800;
-  margin-right: 20%;
-  
 }
+
+
+.operation_area{
+  display: flex;
+  margin-top: 20px;
+}
+.operation_area_btn{
+  text-align: center;
+  width: 33%;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+  }
+  .table-wrapper-scroll-y {
+  display: block;
+  }
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+
+
+
 
 
 

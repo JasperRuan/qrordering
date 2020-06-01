@@ -1,0 +1,204 @@
+.main{
+    width: 100%;
+    text-align: center;
+    
+}
+.Tabbar{
+    width: 70%;
+    display: flex;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.tabitem{
+    width: 50%;
+    background-color: white;
+    color: #265CBF;
+    line-height: 3;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+
+.active{
+    background-color: #265CBF;
+    color: white;
+}
+
+.order-container{
+    width:100%;
+   
+}
+
+
+
+
+#firstTab{
+    background-color: #265CBF;
+    color: white;
+}
+
+.onprocess{
+    width: 100%;
+    margin-right: 20px;
+   
+    border-radius: 30px;
+  }
+  .processed{
+    width: 100%;
+    
+    border-radius: 30px;
+  }
+  .process_item{
+    
+  }
+  .item{
+    border: 2px solid #265CBF;
+    margin: 2px;
+    border-radius: 30px;
+    display: flex;
+  }
+  .heading{
+    text-align: center;
+    color: #265CBF;
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .tabledetail{
+    width: 40% !important;
+    margin-left: 10px;
+    
+  }
+
+  .tabledetail h2{
+    color: #265CBF;
+    font-size: 25px;
+    font-weight: 900;
+    margin-top: 10px!important;
+    margin-bottom: 20px;
+  }
+  .status{
+    width: 40%;
+  }
+  .status_new{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #006400;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .status_add{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #C93756;
+    border-radius: 30px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .goto{
+    width: 20%;
+  }
+
+
+  .order-detail{
+      width: 100%;
+      display: none;
+  }
+  .go-back{
+      width:10%
+  }
+  .go-back img{
+      width:100%
+  }
+  .order-dish{
+      width: 100%;
+  }
+
+  .order-title{
+      color: #265CBF;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+  }
+  .order-info{
+      margin-left: 5px;
+  }
+  .operation_area{
+    display: flex;
+    margin-top: 20px;
+  }
+  .operation_area_btn{
+    text-align: center;
+    width: 33%;
+  }
+  
+  .my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
+  .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+  }
+  .pt-3-half {
+    padding-top: 1.4rem;
+    }
+
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content */
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 70%;
+      }
+      
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .deleteButton{
+        display: flex;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .deleteButton button{
+        width: 30%;
+        background-color: #fff;
+       
+      }
