@@ -1,15 +1,42 @@
+<div class="qr_item" id="qr_item1">
+    <div class="title">
+        Table 1
+    </div>
+    <div class="desc">
+        <div class="headingarea">
+            <div class="word">
+                备注
+            </div>
+            <div id="btn1">
+                <input class="change_btn" type="button" value="save">
+            </div>
 
-<!doctype html>
-<html lang="en">
-<head>
-
-</head>
-
-<body>
-<form action="test.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file">
-    <input type="submit">
-</form>
-</body>
-
-</html>
+        </div>
+        <div class="inputarea">
+            <input id="input1" type="text" name="备注" class="form-control" value="hekki">
+        </div>
+    </div>
+    <div class="qr_img" id="1" onclick="showqr(this.id)" title="https://webzilla.co.nz/covid/record.php?shop_id=17&table1">
+    </div>
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="qr_subimg">
+                <div class="notify">
+                    请使用截图工具（Window + shift + S 调出截图）截取下方蓝色区域并打印放到对应桌子上
+                </div>
+                <div class="qrarea">
+                    <div class="tableid" id="modal_prefer_name1">
+                        hekki
+                    </div>
+                    <img src="media/img/power_wezilla.JPG" alt="">
+                    <div id="modal1" class="modal_qr_image" title="https://webzilla.co.nz/covid/record.php?shop_id=17&table1"></div>
+                    <div class="scan_to_order">
+                        请扫二维码点餐<br>
+                        Please scan QR code to order food
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

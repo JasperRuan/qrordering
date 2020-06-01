@@ -103,9 +103,7 @@ else {
                 商家管理
             </div>
 
-            
-            <div class="sidemenue_item"  onclick="showSub2()">
-
+            <div class="sidemenue_item">
                 产品管理
             </div>
             <div class="sidemenue_item" onclick="showSub3()">
@@ -113,9 +111,9 @@ else {
             </div>
 
 
-        <div class="sidenav-sub">
-            <div id="menu1" style="display:none">
-
+        </div>
+        <div class="sidenav-sub" >
+            <div id="1" style="display:none">
                 <div class="sub_item">
                     <a href="table.php">
                         桌号管理
@@ -129,6 +127,7 @@ else {
                 </div>
 
             </div>
+
             <div id="menu2" style="display:none">
                 <div class="sub_item">
                     <a href="dishcata.php">
@@ -157,8 +156,8 @@ else {
                 </div>
                 
             </div>
-        </div>
 
+        </div>
         <div class="profile_message" id="profile_message" style="width: 40%;margin-left: 30%;background: green;color: white;text-align: center;padding: 6px 0;font-size: 20px;visibility: hidden">
             hello
         </div>
@@ -169,7 +168,6 @@ else {
 
                     <div class="title">
                         Store Profile
-
 
                     </div>
 
@@ -191,31 +189,27 @@ else {
                             English Name
                         </div>
                         <div class="user_input">
-                            <img src="media/img/edit.png" alt="" width="20px" height="20px">
+                            <img src="media/img/edit.jpg" alt="" width="20px" height="20px">
                             <input type="text" value = "<?php echo $english_name; ?>" name="english_name" id="english_name" class="form-control">
                         </div>
                     </div>
-
                     <hr>
                     <div class="row bottom">
                         <div class="fonts col-md-3">
                             Chinese Name
                         </div>
                         <div class="user_input">
-                            <img src="media/img/edit.png" alt="" width="20px" height="20px">
+                            <img src="media/img/edit.jpg" alt="" width="20px" height="20px">
                             <input type="text" value ="<?php echo $chinese_name; ?>" name="chinese_name" id="chinese_name" class="form-control">
                         </div>
-
                     </div>
 
 
                 </div>
 
-
                 <div class="fix_info">
                     <div class="title" style="margin-bottom:10px">
                         Contact
-
 
                     </div>
                     <div class="row">
@@ -261,6 +255,7 @@ else {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script>
 
+
        function showSub(){
             document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#ffffff"
             document.getElementsByClassName("sidemenue_item")[0].style.color = "#265CBF"
@@ -302,7 +297,6 @@ else {
             }
         }
 
-<<<<<<< HEAD
         function showSub3(){
             document.getElementsByClassName("sidemenue_item")[2].style.backgroundColor = "#ffffff"
             document.getElementsByClassName("sidemenue_item")[2].style.color = "#265CBF"
@@ -322,8 +316,9 @@ else {
                 document.getElementsByClassName("sidemenue_item")[2].style.color = "#ffff"
             }
         }
-=======
+
        
+
     </script>
 
     <script>
@@ -383,7 +378,6 @@ else {
             })
         })
 
->>>>>>> 426ae992be6994de653b2374d0e4fac9291aabfd
     </script>
     </body>
 
