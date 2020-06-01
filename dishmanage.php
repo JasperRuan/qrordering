@@ -90,7 +90,7 @@ else {
                 <table class="table table-bordered table-responsive-md table-striped text-center">
                     <thead>
                     <tr id="row_top">
-                        
+
                         <th class="text-center">菜品名称</th>
                         <th class="text-center">菜单分类</th>
                         <th class="text-center">价格</th>
@@ -143,7 +143,7 @@ else {
                             echo '
                             <tr id="row'. $row['Food_id'] .'">
    <form action="">
-      
+
       <td class="pt-3-half" >
          <div class="content1">
             <h4>'. $row['Chinese_name'] .'</h4>
@@ -467,16 +467,15 @@ else {
                     console.log('dish add success');
                     var insert_code = '<tr id="row'+ last_food_id +'">\n' +
                         '   <form action=""></form>\n' +
-                        '
                         '   <td class="pt-3-half">\n' +
-                        '      <div class="content1">\n' +
+                        '      <div class="content1" style="position: relative">\n' +
                         '         <h4>'+ chinese_name +'</h4>\n' +
                         '         <h5>'+ english_name +'</h5>\n' +
                         '      </div>\n' +
                         '   </td>\n' +
                         '   <td class="pt-3-half">\n' +
                         '      <div class="content">\n' +
-                        '         <select id="select'+ last_food_id +'" name="select'+ last_food_id +'">\n' + option_code +
+                        '         <select id="select'+ last_food_id +'" name="select'+ last_food_id +'">\n' +option_code +
                         '         </select>\n' +
                         '      </div>\n' +
                         '   </td>\n' +
