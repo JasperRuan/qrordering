@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href = "share/header_main.css">
     
-    <link rel="stylesheet" href="share/dishcata.css">
+    <link rel="stylesheet" href="share/pastOrder.css">
     
     <style>
      
@@ -67,6 +67,8 @@
                 </div>
                 
             </div>
+
+
             <div id="menu3" style="display:none">
                 <div class="sub_item">
                     <a href="currentOrder.php">
@@ -86,113 +88,63 @@
         
         
         <div class="main">
-        <!-- Editable table -->
+        
+           <!-- Editable table -->
             <div class="card">
-            <h3 class="card-header text-center font-weight-bold text-uppercase py-4" style="background-color: #265CBF; color:white">菜品管理</h3>
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
             <div class="card-body">
                 <div id="table" class="table-editable">
-                <span class="table-add float-right mb-3 mr-2" onclick="checkheight()" id="myBtn"><a href="#!" class="text-success"><i
-                        class="fa fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                
                 <table class="table table-bordered table-responsive-md table-striped text-center">
                     <thead>
                     <tr>
-                        <th class="text-center">ID</th>
-                        <th class="text-center">产品分类管理</th>
+                        <th class="text-center">流水号</th>
+                        <th class="text-center">订单开始时间</th>
+                        <th class="text-center">订单完成时间</th>
+                        <th class="text-center">桌号</th>
+                        <th class="text-center">消费金额</th>
+                        
                         <th class="text-center">Remove</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <form action="">
-                            <td class="pt-3-half">
-                                1
-                            </td>
-                            <td class="pt-3-half" >
-                                <div class="content1" >
-                                    <p>鸡肉(chicken<!--english name from sql-->)</p>
-                                </div>
-                            </td>
-                            
-                            <td>
-                                
-                                    <span class="table-remove"><button type="button"
-                                        class="btn btn-danger btn-rounded btn-sm my-0"  style="margin-bottom:5px !important">删除产品</button></span>
-                                    </br>
-                                    
-                                
-                            </td>
-                        </form>
+                        <td class="pt-3-half" >XXX-XXXXX-XXXX</td>
+                        <td class="pt-3-half">2020-5-25 17：49</td>
+                        <td class="pt-3-half" >2020-5-25 18：00</td>
+                        <td class="pt-3-half">VIP1</td>
+                        <td class="pt-3-half" >123</td>
+                        
+                        <td>
+                        <span class="table-remove" ><button type="button"
+                            class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                        </td>
                     </tr>
+                    <!-- This is our clonable table line -->
+                  
                     <!-- This is our clonable table line -->
                    
-                    <!-- This is our clonable table line -->
-                    
-                    <!-- This is our clonable table line -->
-                    <tr>
-                        <form action="">
-                            <td class="pt-3-half">
-                                1
-                            </td>
-                            <td class="pt-3-half" >
-                                <div class="content1">
-                                <p>鸡肉(chicken<!--english name from sql-->)</p>
-                                </div>
-                            </td>
-                            
-                            <td>
-                                
-                                    <span class="table-remove"><button type="button"
-                                        class="btn btn-danger btn-rounded btn-sm my-0"  style="margin-bottom:5px !important">删除产品</button></span>
-                                    </br>
-                                    
-                                
-                            </td>
-                        </form>
-                    </tr>
                     </tbody>
                 </table>
                 </div>
             </div>
             </div>
             <!-- Editable table -->
-           
+            
+
             <div id="myModal" class="modal">
 
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                        <div class="title" style="margin-bottom:25px">
-                            添加分类
-                        </div>
-                        <div class="neiron">
-                            <form action="">
-                                <div class="catag">
-                                    <div class="head">
-                                        中文名字
-                                    </div>
-                                    <input type="text" require>
-
-                                    
-                                </div>
-                                <div class="catag">
-                                    <div class="head">
-                                        英文名字
-                                    </div>
-                                    <input type="text">
-
-                                    
-                                </div>
-                                <div class="save-btn">
-                                    <input type="button" class="btn btn-primary" value="添加">
-                                </div>
-                            </form>
-                        </div>
-                </div>
-
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                    确定删除该历史订单吗？
+                    <div class="deleteButton">
+                        <button id="delete"class="btn btn-primary" style="margin-right: 40% ; background-color: #B22222;">删除</button><button class="btn btn-primary">取消</button>
+                    </div>
             </div>
         </div>
                 
-    
+
         
 
     
@@ -262,72 +214,55 @@
                 document.getElementsByClassName("sidemenue_item")[2].style.color = "#ffff"
             }
         }
-
         //sidebar high
         function checkheight(){
             $(".sidenav").height(Math.max($(".main").height(),$(".sidenav").height()+50));
             $(".sidenav-sub").height(Math.max($(".main").height(),$(".sidenav-sub").height()+50));
             }
-        //table js start here
 
-                // Get the modal
+
+        //table js start here
+      
+
+        const $tableID = $('#table');
+        
+
+       
         var modal = document.getElementById("myModal");
+        $tableID.on('click', '.table-remove', function () {
+            modal.style.display = "block";
+            let tritem =$(this).parents('tr');
+            $(".deleteButton").on("click", function () {tritem.detach();modal.style.display = "none";})
+                
+                
+            
+        });
+
+        // A few jQuery helpers for exporting only
+        
 
         // Get the button that opens the modal
         var btn = document.getElementById("myBtn");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
-            
 
-          
-// When the user clicks the button, open the modal
-        const $tableID = $('#table');
-        const newTr = `
-        <tr class="hide">
-        <td class="pt-3-half" contenteditable="true">Example</td>
-        <td class="pt-3-half" contenteditable="true">Example</td>
-        <td class="pt-3-half" contenteditable="true">Example</td>
-        <td class="pt-3-half" contenteditable="true">Example</td>
-        <td class="pt-3-half" contenteditable="true">Example</td>
-        <td class="pt-3-half">
-            <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up" aria-hidden="true"></i></a></span>
-            <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
-        </td>
-        <td>
-            <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0 waves-effect waves-light">Remove</button></span>
-        </td>
-        </tr>`;
-        btn.onclick = function() {
-                modal.style.display = "block";
-            }
+        // When the user clicks the button, open the modal 
+        function notifyRemove() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
                 modal.style.display = "none";
             }
-        $('.table-add').on('click', 'i', () => {
-           
-
-            // When the user clicks on <span> (x), close the modal
-            
-
-            const $clone = $tableID.find('tbody tr').last().clone(true).removeClass('hide table-line');
-
-            if ($tableID.find('tbody tr').length === 0) {
-
-                $('tbody').append(newTr);
-            }
-
-                $tableID.find('table').append($clone);
-        });
-
-        $tableID.on('click', '.table-remove', function () {
-
-            $(this).parents('tr').detach();
-        });
-
-       
-
-      
+        }
     </script>
   </body>
 

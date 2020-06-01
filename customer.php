@@ -29,7 +29,7 @@
             <div class="sidemenue_item"  onclick="showSub2()">
                 产品管理
             </div>
-            <div class="sidemenue_item">
+            <div class="sidemenue_item" onclick="showSub3()">
                 订单显示
             </div>
             
@@ -65,6 +65,20 @@
                 </div>
                 
             </div>
+            <div id="menu3" style="display:none">
+                <div class="sub_item">
+                    <a href="currentOrder.php">
+                        实时订单
+                    </a>
+                </div>
+                
+                <div class="sub_item">
+                    <a href="pastOrder.php">
+                       历史订单
+                    </a>
+                </div>
+                
+            </div>
         </div>
 
     </div>
@@ -84,12 +98,16 @@
             document.getElementsByClassName("sidemenue_item")[0].style.color = "#265CBF"
             document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
             document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffffff"
+            document.getElementsByClassName("sidemenue_item")[2].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[2].style.color = "#ffffff"
             if(document.getElementById("menu1").style.display == "none"){
                 document.getElementById("menu1").style.display="block"
                 document.getElementById("menu2").style.display="none"
+                document.getElementById("menu3").style.display="none"
             }else{
                 document.getElementById("menu1").style.display="none"
                 document.getElementById("menu2").style.display="none"
+                document.getElementById("menu3").style.display="none"
                 document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
                 document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffff"
             }
@@ -101,14 +119,38 @@
             document.getElementsByClassName("sidemenue_item")[1].style.color = "#265CBF"
             document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
             document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffffff"
+            document.getElementsByClassName("sidemenue_item")[2].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[2].style.color = "#ffffff"
             if(document.getElementById("menu2").style.display == "none"){
                 document.getElementById("menu2").style.display="block"
                 document.getElementById("menu1").style.display="none"
+                document.getElementById("menu3").style.display="none"
             }else{
                 document.getElementById("menu1").style.display="none"
                 document.getElementById("menu2").style.display="none"
+                document.getElementById("menu3").style.display="none"
                 document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
                 document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffff"
+            }
+        }
+
+        function showSub3(){
+            document.getElementsByClassName("sidemenue_item")[2].style.backgroundColor = "#ffffff"
+            document.getElementsByClassName("sidemenue_item")[2].style.color = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[1].style.color = "#ffffff"
+            document.getElementsByClassName("sidemenue_item")[0].style.backgroundColor = "#265CBF"
+            document.getElementsByClassName("sidemenue_item")[0].style.color = "#ffffff"
+            if(document.getElementById("menu3").style.display == "none"){
+                document.getElementById("menu3").style.display="block"
+                document.getElementById("menu2").style.display="none"
+                document.getElementById("menu1").style.display="none"
+            }else{
+                document.getElementById("menu3").style.display="none"
+                document.getElementById("menu2").style.display="none"
+                document.getElementById("menu1").style.display="none"
+                document.getElementsByClassName("sidemenue_item")[2].style.backgroundColor = "#265CBF"
+                document.getElementsByClassName("sidemenue_item")[2].style.color = "#ffff"
             }
         }
     </script>
