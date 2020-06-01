@@ -89,8 +89,8 @@ else {
                         class="fa fa-plus fa-2x" aria-hidden="true"></i></a></span>
                 <table class="table table-bordered table-responsive-md table-striped text-center">
                     <thead>
-                    <tr>
-                        <th class="text-center">菜品图片</th>
+                    <tr id="row_top">
+                        
                         <th class="text-center">菜品名称</th>
                         <th class="text-center">菜单分类</th>
                         <th class="text-center">价格</th>
@@ -120,7 +120,7 @@ else {
                     SELECT Food_id, Chinese_name, English_name, Food_category_id, Price, Stock, Hide, Image_path
                     FROM Foods
                     WHERE Shop_id = '$shop_id'
-                    ORDER BY Food_id
+                    ORDER BY Food_id DESC
                             ";
                     $result = $conn->query($sql);
                     $count = 0;
@@ -143,9 +143,7 @@ else {
                             echo '
                             <tr id="row'. $row['Food_id'] .'">
    <form action="">
-      <td class="pt-3-half"  width="10%">
-         <img src="media/img/宫爆.jpg" alt="" width=100%>
-      </td>
+      
       <td class="pt-3-half" >
          <div class="content1">
             <h4>'. $row['Chinese_name'] .'</h4>
@@ -171,7 +169,7 @@ else {
          <span>标记缺货</span>
          </label>
          <label class="checkbox">
-         <input id="hide'. $row['Food_id'] .'" type="checkbox" '. $stock . '/ >
+         <input id="hide'. $row['Food_id'] .'" type="checkbox" '. $hide . '/ >
          <span>隐藏菜品</span>
          </label>
       </td>
@@ -420,6 +418,7 @@ else {
         function add_dish(){
             var shop_id = <?php echo $shop_id; ?>;
             var food_category_array = <?php echo json_encode($food_category_array); ?>;
+
             var price = document.getElementById('add_price').value;
             var english_name = document.getElementById('add_english_name').value;
             var chinese_name = document.getElementById('add_chinese_name').value;
@@ -447,51 +446,62 @@ else {
                 success: function(result)
                 {
                     var last_food_id = result;
+                    var option_code = '<option value="Others">请选择分类</option>';
+                    var add_select = document.getElementById('add_category').value;
+                    i = 0;
+                    for (i = 0; i < food_category_array.length; i++) {
+                        if(add_select == food_category_array[i][1]){
+                            category_id = food_category_array[i][0];
+                            option_code = option_code + '<option selected id="food_category'+food_category_array[i][0]+'" name="food_category'+food_category_array[i][0]+'" value="'+food_category_array[i][1]+'">'+food_category_array[i][1]+'</option>';
+                        }
+                        else {
+                            option_code = option_code + '<option id="food_category'+food_category_array[i][0]+'" name="food_category'+food_category_array[i][0]+'" value="'+food_category_array[i][1]+'">'+food_category_array[i][1]+'</option>';
+                        }
+                    }
+
+
+                    var chinese_name = document.getElementById('add_chinese_name').value;
+                    var english_name = document.getElementById('add_english_name').value;
+                    var price = document.getElementById('add_price').value;
                     document.getElementById('myModal').style.display = 'none';
                     console.log('dish add success');
-                    var insert_code = '<tr id="row8">\n' +
+                    var insert_code = '<tr id="row'+ last_food_id +'">\n' +
                         '   <form action=""></form>\n' +
-                        '   <td class="pt-3-half" width="10%">\n' +
-                        '      <img src="media/img/宫爆.jpg" alt="" width="100%">\n' +
-                        '   </td>\n' +
+                        '
                         '   <td class="pt-3-half">\n' +
                         '      <div class="content1">\n' +
-                        '         <h4>宫保鸡丁</h4>\n' +
-                        '         <h5>Spicy Chicken</h5>\n' +
+                        '         <h4>'+ chinese_name +'</h4>\n' +
+                        '         <h5>'+ english_name +'</h5>\n' +
                         '      </div>\n' +
                         '   </td>\n' +
                         '   <td class="pt-3-half">\n' +
                         '      <div class="content">\n' +
-                        '         <select id="select8" name="select8">\n' +
-                        '            <option value="Others">请选择分类</option>\n' +
-                        '            <option selected="" id="food_category68" name="food_category68" value="鸡肉">鸡肉</option>\n' +
-                        '            <option id="food_category69" name="food_category69" value="猪肉">猪肉</option>\n' +
-                        '            <option id="food_category71" name="food_category71" value="牛肉">牛肉</option>\n' +
+                        '         <select id="select'+ last_food_id +'" name="select'+ last_food_id +'">\n' + option_code +
                         '         </select>\n' +
                         '      </div>\n' +
                         '   </td>\n' +
                         '   <td class="pt-3-half">\n' +
                         '      <div class="content">\n' +
-                        '         <span style="color: #265CBF;margin-right:3px">$</span><input id="price8" type="text" value="40.99" style="width:80px">\n' +
+                        '         <span style="color: #265CBF;margin-right:3px">$</span><input id="price'+ last_food_id +'" type="text" value="'+ price +'" style="width:80px">\n' +
                         '      </div>\n' +
                         '   </td>\n' +
                         '   <td class="pt-3-half">\n' +
                         '      <label class="checkbox">\n' +
-                        '      <input id="stock8" type="checkbox">\n' +
+                        '      <input id="stock'+ last_food_id +'" type="checkbox">\n' +
                         '      <span>标记缺货</span>\n' +
                         '      </label>\n' +
                         '      <label class="checkbox">\n' +
-                        '      <input id="hide8" type="checkbox">\n' +
+                        '      <input id="hide'+ last_food_id +'" type="checkbox">\n' +
                         '      <span>隐藏菜品</span>\n' +
                         '      </label>\n' +
                         '   </td>\n' +
-                        '   <td id="control8">\n' +
+                        '   <td id="control'+ last_food_id +'">\n' +
                         '      <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" style="margin-bottom:5px !important">删除产品</button></span>\n' +
                         '      <br>\n' +
                         '      <span onclick="save_dish(this)"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0" style="background-color:#007968!important;border-color: #007968!important">保存设置</button></span>\n' +
                         '   </td>\n' +
                         '</tr>';
-                    $( insert_code ).insertAfter( "#row9" );
+                    $( insert_code ).insertAfter( "#row_top" ); // 改这块
                 }
             });
         }
