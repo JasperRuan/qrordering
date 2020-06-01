@@ -203,6 +203,10 @@
         }
 
 
+        $(".sidenav").height(Math.max($(".main").height(),$(".sidenav").height()+50));
+        $(".sidenav-sub").height(Math.max($(".main").height(),$(".sidenav-sub").height()+50));
+
+
         function showSub2(){
             document.getElementsByClassName("sidemenue_item")[1].style.backgroundColor = "#ffffff"
             document.getElementsByClassName("sidemenue_item")[1].style.color = "#265CBF"
