@@ -93,7 +93,7 @@
                   </span>
             </div>
         </a>
-        <a href="register.php">
+        <a href="dishmanagePhone.php">
             <div class="menu_drawer_item">
                   <span class="menu_drawer_item_icon">
                   <img src="media/img/菜品管理.png">
