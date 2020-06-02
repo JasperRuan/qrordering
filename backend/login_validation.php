@@ -1,8 +1,8 @@
 <?php
 include "connect_database.php";
 if (isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = $conn->real_escape_string($_POST['email']);
+    $password = $conn->real_escape_string($_POST['password']);
     $emailError = false;
     $passwordError = false;
     $sql = "SELECT Shop_id, Chinese_name, English_name, Email, Password, Phone, Address, Verified 
@@ -25,23 +25,23 @@ if (isset($_POST['submit'])){
             #登陆成功
             $cookie_name = 'qrorder_shop_id';
             $cookie_value = $shop_id;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 5), "/"); // 86400 = 1 day
 
             $cookie_name = 'qrorder_chinese_name';
             $cookie_value = $chinese_name;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 5), "/"); // 86400 = 1 day
 
             $cookie_name = 'qrorder_english_name';
             $cookie_value = $english_name;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 5), "/"); // 86400 = 1 day
 
             $cookie_name = 'qrorder_phone';
             $cookie_value = $phone;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 5), "/"); // 86400 = 1 day
 
             $cookie_name = 'qrorder_email';
             $cookie_value = $email;
-            setcookie($cookie_name, $cookie_value, time() + (60 * 5), "/"); // 86400 = 1 day
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 5), "/"); // 86400 = 1 day
         }
         else {
             $passwordError = true;
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])){
         message_element = document.getElementById('login_message');
         message_element.style.color = 'green';
         message_element.innerText = 'Successfully logged in';
-        window.location.href = "index.php";
+        window.location.href = "profile.php";
     }
 
 </script>

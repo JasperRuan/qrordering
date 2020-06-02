@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a764a147-0913-4eda-a470-1bd574f58f78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/login_validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/login_validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/update_shop_info.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/update_shop_info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/upload_logo.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/upload_logo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/customer_image/logo/1_pE2fOVDikEUwiQJlh4ggzg.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/customer_image/logo/Capture.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/customer_image/logo/register_qrcode.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/customer_image/logo/u=353073652,2483566435&amp;fm=26&amp;gp=0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dishmanage.php" beforeDir="false" afterPath="$PROJECT_DIR$/dishmanage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +52,9 @@
       <option name="presentableId" value="Default" />
       <updated>1589751070765</updated>
       <workItem from="1589751076745" duration="8147000" />
-      <workItem from="1589841566062" duration="97074000" />
+      <workItem from="1589841566062" duration="153287000" />
+      <workItem from="1590790226965" duration="19117000" />
+      <workItem from="1591047238709" duration="3036000" />
     </task>
     <servers />
   </component>
@@ -72,10 +67,10 @@
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1590364913638" />
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.744.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1590203927431" />
-    <state x="1114" y="623" key="NewPhpFileDialog" timestamp="1590364918773">
+    <state x="1114" y="623" key="NewPhpFileDialog" timestamp="1590799358837">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1114" y="623" key="NewPhpFileDialog/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1590364918773" />
+    <state x="1114" y="623" key="NewPhpFileDialog/-1920.744.1280.693/0.0.2560.1400@0.0.2560.1400" timestamp="1590799358837" />
     <state x="1114" y="623" key="NewPhpFileDialog/-1920.744.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1590205721633" />
     <state x="781" y="342" key="SettingsEditor" timestamp="1589861569719">
       <screen x="0" y="0" width="2560" height="1400" />
