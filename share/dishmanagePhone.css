@@ -1,0 +1,57 @@
+.main{
+    width: 100%;
+    text-align: center;
+    
+}
+.Tabbar{
+    width: 70%;
+    display: flex;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.tabitem{
+    width: 50%;
+    background-color: white;
+    color: #265CBF;
+    line-height: 3;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+
+.active{
+    background-color: #265CBF;
+    color: white;
+}
+
+.pt-3-half {
+    padding-top: 1.4rem;
+    
+    }
+
+  .my-custom-scrollbar {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    }
+ .table-wrapper-scroll-y {
+    display: block;
+    }
+  .scrollable-menu {
+      height: auto;
+      max-height: 400px;
+      overflow-x: hidden;
+  }
+
+
+
+ 
+      
+      /* Modal Content */
+.menu-img{
+    width: 30%;
+    
+}
+.menu-img img{
+    width:100%;
+}

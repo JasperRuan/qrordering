@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href ="share/orderPhone.css">
+    <link rel="stylesheet" href ="share/orderHistoryPhone.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     
@@ -23,7 +23,7 @@
             <!-- Editable table -->
         <div class="card">
         <h3 class="card-header text-center font-weight-bold text-uppercase py-4" style="background-color:#265CBF;color:white">历史订单</h3>
-        <div class="card-body">
+        <div class="card-body table-wrapper-scroll-y my-custom-scrollbar">
             <div id="table" class="table-editable">
             <table class="table table-bordered  table-striped text-center">
                 <thead>
@@ -46,6 +46,7 @@
                         class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
                     </td>
                 </tr>
+                
                 <!-- This is our clonable table line -->
                
                 
@@ -63,7 +64,7 @@
                     <span class="close">&times;</span>
                         确定删除该历史订单吗？
                         <div class="deleteButton">
-                            <button id="delete"class="btn btn-primary" style="margin-right: 40% ; background-color: #B22222;">删除</button><button class="btn btn-primary">取消</button>
+                            <button id="delete"class="btn btn-primary" style="margin-right: 40% ; background-color: #B22222;">删除</button><button id="close" class="btn btn-primary">取消</button>
                         </div>
                 </div>
             </div>
@@ -81,22 +82,34 @@
                 document.getElementsByClassName("main")[0].style.display ="none"
                 document.getElementsByClassName("order-detail")[0].style.display ="block"
             }
-            function backToMain(){
-                document.getElementsByClassName("main")[0].style.display ="block"
-                document.getElementsByClassName("order-detail")[0].style.display ="none"
-            }
+            
            
             const $tableID = $('#table');
             var modal = document.getElementById("myModal");
             $tableID.on('click', '.table-remove', function () {
                 modal.style.display = "block";
                 let tritem =$(this).parents('tr');
-                $(".deleteButton").on("click", function () {tritem.detach();modal.style.display = "none";})
+                $("#delete").on("click", function () {tritem.detach();modal.style.display = "none";})
                 
                 
             
         });
+        var span = document.getElementsByClassName("close")[0];
+        var close = document.getElementById("close");
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+        modal.style.display = "none";
+        }
+        close.onclick = function() {
+            modal.style.display = "none";
+        }
 
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        }
 
      
      
